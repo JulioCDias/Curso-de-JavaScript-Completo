@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Pessoa(){ // Metodo antigo de OOP
+            this.nome = "Julio";
+            this.idade = 27,
+            this.printNome = function(){ // uma funçao em um objeto
+                alert(this.nome);
+            }
+            this.returnAnimal = function(animal){ //Passando onjeto como parametro
+                return animal;
+            }
+        }
+        var pessoa = new Pessoa();
+        pessoa.printNome();
+
+        function Animal(nome,peso){ // Multiplos parametros
+            if(nome == undefined){ // validaçoes dentro de um objeto
+                nome = "Cachorro";
+            }
+            if (peso == undefined){
+                peso = 7;
+            }
+            this.nome = nome;
+            this.peso = peso;
+        }
+        var animal = new Animal("Gato"); // passagem de parametros para o objetos
+        alert(animal.nome)
+        alert(pessoa.returnAnimal(animal).nome)
+
+    </script>
+</body>
+</html>

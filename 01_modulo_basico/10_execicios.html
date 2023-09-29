@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n1 = prompt("Informe o Primeiro numero: ");
+        var n2 = prompt("Informe o Segundo numero: ");
+        var operacao = parseInt(prompt("Informe a Operação: [1] Somar , [2] Subtrair, [3] Multiplicar, [4] Dividir "));
+        var resultado;
+        
+        switch (operacao) {
+            case 1:
+                resultado = parseFloat(n1) + parseFloat(n2);
+                alert("O resultado da soma é: " + resultado);
+                break;
+            case 2:
+                resultado = parseFloat(n1) - parseFloat(n2);
+                alert("O resultado da subtração é: " + resultado);
+                break;
+            case 3:
+                resultado = parseFloat(n1) * parseFloat(n2);
+                alert("O resultado da multiplicação é: " + resultado);
+                break;
+            case 4:
+                resultado = parseFloat(n1) / parseFloat(n2);
+                alert("O resultado da divisão é: " + resultado);
+                break;
+            default:
+                alert("Não foi especificada nenhuma opção válida.");
+                break;
+        }
+    </script>
+    
+</body>
+</html>
