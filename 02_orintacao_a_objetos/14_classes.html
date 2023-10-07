@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        class Animal{ // Metodo atual de OOP
-            constructor(){ //Metodo Contrutor da classe
-                this.nome = "Cachorrão";
+        class Animal { // Metodo atual de OOP
+            constructor(nome) { //Metodo Contrutor da classe
+                this.nome = nome;
             }
 
-            printNome(){ // metodo da classe
+            printNome() { // metodo da classe
                 return this.nome;
             }
         }
-        animal = new Animal();
-        alert(animal.nome);
-        alert(animal.printNome());
+        class Cachorro extends Animal {
+            constructor(nome) { // lembrar de colocar o construtor da classe
+                super(nome); //super invoca o construtor da classe pai no caso animal
+                this.raca = "Vira lata";
+            }
+
+            printRaca() {
+                return this.raca;
+            }
+        }
+        dog = new Cachorro("Tótó");
+        alert(dog.nome);
+        alert(dog.printRaca());
     </script>
 </body>
+
 </html>
