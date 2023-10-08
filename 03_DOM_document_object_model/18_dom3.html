@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 3</title>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script>
+        var elementos = document.getElementsByClassName('box');
+        var el = elementos[0];
+        el.style.width = "100px";
+        el.style.height = "100px";
+        el.style.backgroundColor = 'red';
+    </script>
+</body>
+
+</html>

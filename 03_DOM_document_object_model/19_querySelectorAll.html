@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query selector</title>
+</head>
+
+<body>
+    <div class="teste">
+        texto
+        <div class="inside-teste">
+            texto 2
+        </div>
+    </div>
+
+    <script>
+        var els = document.querySelectorAll(".teste .inside-teste");
+        els[0].style.color = "red"; // temq eu passar o indece se nao nao funciona
+        els[0].innerHTML = "Manupulaçaão de conteudo";
+        var args = document.querySelectorAll(".teste");
+        args[0].style.color = "Blue";
+
+
+    </script>
+</body>
+
+</html>

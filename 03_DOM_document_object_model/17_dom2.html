@@ -3,18 +3,17 @@
 
 <head>
     <title>Exemplo getElementById</title>
-    <script>
-        function mudarCor(novaCor) {
-            var elemento = document.getElementById("para1");
-            elemento.style.color = novaCor;
-        }
-    </script>
 </head>
 
 <body>
-    <p id="para1">Algum texto de exemplo</p>
-    <button onclick="mudarCor('blue');">Azul</button>
-    <button onclick="mudarCor('red');">Vermelho</button>
+    <div id="box"></div>
 </body>
+<script>
+    var el = document.getElementById("box"); // Manipulando Dom peo meio de Id
+    el.style.width = "100px";
+    el.style.height = "100px";
+    el.style.backgroundColor = 'red';
+    el.style.marginLeft = "200px"
+</script>
 
 </html>
