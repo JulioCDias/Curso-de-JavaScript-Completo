@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block scopes</title>
+</head>
+
+<body>
+    <script>
+        {
+            var nome = "Julio"; // var tem uso global
+            //para restringir o uso de var, usar let
+            let teste = () => { // let tem uso local
+                console.log(nome);
+            }
+        }
+        console.log(nome);
+    </script>
+</body>
+
+</html>
