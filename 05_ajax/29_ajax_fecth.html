@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+
+<body>
+
+    <script>
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://jsonplaceholder.typicode.com/todo/1', true);
+
+        request.onload = function () {
+            if (request.status >= 200 && request.status < 400) {
+                // Success!
+                var data = JSON.parse(request.responseText);
+                console.log(data);
+            } else {
+                // We reached our target server, but it returned an error
+                console.log('error');
+            }
+        };
+    </script>
+</body>
+
+</html>
