@@ -8,21 +8,27 @@
 </head>
 
 <body>
-
+    <!-- Forma tradicional sem o Fecth-->
     <script>
         var request = new XMLHttpRequest();
-        request.open('GET', 'https://jsonplaceholder.typicode.com/todo/1', true);
+        request.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
 
         request.onload = function () {
-            if (request.status >= 200 && request.status < 400) {
+            if (this.status >= 200 && this.status < 400) {
                 // Success!
-                var data = JSON.parse(request.responseText);
+                var data = JSON.parse(this.response);
                 console.log(data);
             } else {
                 // We reached our target server, but it returned an error
                 console.log('error');
             }
         };
+
+        request.onerror = function () {
+
+        }
+
+        request.send();
     </script>
 </body>
 
